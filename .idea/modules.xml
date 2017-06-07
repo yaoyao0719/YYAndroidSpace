@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/YYAndroidSpace.iml" filepath="$PROJECT_DIR$/YYAndroidSpace.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/customrecyclerview/customrecyclerview.iml" filepath="$PROJECT_DIR$/customrecyclerview/customrecyclerview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/galleryPhoto/galleryPhoto.iml" filepath="$PROJECT_DIR$/galleryPhoto/galleryPhoto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imagelibary/imagelibary.iml" filepath="$PROJECT_DIR$/imagelibary/imagelibary.iml" />
+    </modules>
+  </component>
+</project>
