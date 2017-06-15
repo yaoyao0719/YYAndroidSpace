@@ -3,6 +3,8 @@ package com.yaoyao.android;
 import android.app.Application;
 import android.content.Context;
 
+import com.yaoyao.android.utils.ConfigUtil;
+
 import cn.finalteam.galleryfinal.CoreConfig;
 import cn.finalteam.galleryfinal.FunctionConfig;
 import cn.finalteam.galleryfinal.GalleryFinal;
@@ -24,6 +26,7 @@ public class BaseApplication extends Application {
         super.onCreate();
         instance = this;
         context = getApplicationContext();
+        ConfigUtil.init(this);
         initGalleryPhoto();
         initFont();
     }
