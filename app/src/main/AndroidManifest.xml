@@ -30,6 +30,8 @@
         </activity>
          <activity android:name=".activity.welcome.WelcomeActivity">
          </activity>
+        <activity android:name=".activity.SplashActivty">
+        </activity>
     </application>
 
 </manifest>

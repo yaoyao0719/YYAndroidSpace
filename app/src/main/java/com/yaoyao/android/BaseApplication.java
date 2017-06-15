@@ -7,10 +7,11 @@ import cn.finalteam.galleryfinal.CoreConfig;
 import cn.finalteam.galleryfinal.FunctionConfig;
 import cn.finalteam.galleryfinal.GalleryFinal;
 import cn.finalteam.galleryfinal.utils.GlideImageLoader;
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 /**
  * @author:yaoyao
- * @email :yaoyao@jingzhengu.com
+ * @email :229847401@qq.com
  * @date  :2017/5/17
  * @desc  :
  */
@@ -24,6 +25,7 @@ public class BaseApplication extends Application {
         instance = this;
         context = getApplicationContext();
         initGalleryPhoto();
+        initFont();
     }
 
     public static BaseApplication getInstance() {
@@ -46,6 +48,13 @@ public class BaseApplication extends Application {
                 .setDebug(true)
                 .build();
         GalleryFinal.init(coreConfig);
+    }
+    private void initFont() {
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                .setDefaultFontPath("fonts/FZLTH.TTF")
+                .setFontAttrId(R.attr.fontPath)
+                .build()
+        );
     }
 }
 

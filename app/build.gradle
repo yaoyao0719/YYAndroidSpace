@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -45,5 +46,7 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
     compile 'com.jaeger.statusbarutil:library:1.4.0'
     compile 'com.romandanylyk:pageindicatorview:0.1.2@aar'
+    compile 'uk.co.chrisjenx:calligraphy:2.2.0'
+    compile 'org.greenrobot:greendao:3.2.2'
 
 }

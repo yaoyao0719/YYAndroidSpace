@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.content.res.ColorStateList;
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
 import android.text.Editable;
@@ -33,7 +34,9 @@ public class ViewUtils {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp,
                getApplication().getResources().getDisplayMetrics());
     }
-
+    public static int px2dp(float px) {
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX, px, Resources.getSystem().getDisplayMetrics());
+    }
     public static int densityDpi(){
         return getApplication().getResources().getDisplayMetrics().densityDpi;
     }
