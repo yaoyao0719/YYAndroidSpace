@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/customrecyclerview/customrecyclerview.iml" filepath="$PROJECT_DIR$/customrecyclerview/customrecyclerview.iml" />
       <module fileurl="file://$PROJECT_DIR$/galleryPhoto/galleryPhoto.iml" filepath="$PROJECT_DIR$/galleryPhoto/galleryPhoto.iml" />
       <module fileurl="file://$PROJECT_DIR$/imagelibary/imagelibary.iml" filepath="$PROJECT_DIR$/imagelibary/imagelibary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
     </modules>
   </component>
 </project>

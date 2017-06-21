@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/customrecyclerview" />
             <option value="$PROJECT_DIR$/galleryPhoto" />
             <option value="$PROJECT_DIR$/imagelibary" />
+            <option value="$PROJECT_DIR$/library" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -1,1 +1,1 @@
-include ':app', ':customrecyclerview', ':galleryPhoto', ':imagelibary'
+include ':app', ':customrecyclerview', ':galleryPhoto', ':imagelibary', ':library'
