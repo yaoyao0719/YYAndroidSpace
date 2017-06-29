@@ -3,7 +3,7 @@ package com.yaoyao.android.services;
 import android.widget.ImageView;
 
 import com.android.imagelibary.ImageLoaderUtil;
-import com.yaoyao.android.BaseApplication;
+import com.yaoyao.android.AppApplication;
 import com.yaoyao.android.utils.ViewUtils;
 
 
@@ -18,9 +18,9 @@ public class ImageLoaderService {
      * @param imageView
      */
     public static void startupLogo( String url, ImageView imageView) {
-        ImageLoaderUtil.getInstance().loadRoundImage(BaseApplication.getAppContext(), url, imageView, ViewUtils.dp2px(2), 0);
+        ImageLoaderUtil.getInstance().loadRoundImage(AppApplication.getAppContext(), url, imageView, ViewUtils.dp2px(2), 0);
     }
     public static void loadImage( String url, ImageView imageView) {
-        ImageLoaderUtil.getInstance().loadImage(BaseApplication.getAppContext(), url, imageView, 0);
+        ImageLoaderUtil.getInstance().loadImage(AppApplication.getAppContext(), url, imageView, 0);
     }
 }

@@ -3,7 +3,7 @@ package com.yaoyao.android.utils;
 import android.content.Context;
 import android.text.TextUtils;
 
-import com.yaoyao.android.BaseApplication;
+import com.yaoyao.android.AppApplication;
 import com.yaoyao.android.db.CommonDBManager;
 import com.yaoyao.android.model.ConfigInfo;
 import com.yaoyao.android.model.ConfigInfoDao;
@@ -48,7 +48,7 @@ public class ConfigUtil {
         return true;
     }
     public static int getIntConfig(String cfgName, int defVal) {
-        Object objInt = getConfig(BaseApplication.getAppContext(),cfgName);
+        Object objInt = getConfig(AppApplication.getAppContext(),cfgName);
         if (objInt == null) {
             return defVal;
         } else {
@@ -61,7 +61,7 @@ public class ConfigUtil {
         }
     }
     public static boolean getBooleanConfig(String cfgName, boolean defVal) {
-        Object objBoolean = getConfig(BaseApplication.getAppContext(),cfgName);
+        Object objBoolean = getConfig(AppApplication.getAppContext(),cfgName);
         if (objBoolean == null) {
             return defVal;
         } else {
@@ -80,7 +80,7 @@ public class ConfigUtil {
     }
 
     public static long getLongConfig(String cfgName, Long defVal) {
-        Object objLong = getConfig(BaseApplication.getAppContext(),cfgName);
+        Object objLong = getConfig(AppApplication.getAppContext(),cfgName);
         if (objLong == null) {
             return defVal;
         } else {
@@ -95,7 +95,7 @@ public class ConfigUtil {
 
 
     public static String getStringConfig(String cfgName, String defVal) {
-        Object objString = getConfig(BaseApplication.getAppContext(),cfgName);
+        Object objString = getConfig(AppApplication.getAppContext(),cfgName);
         if (objString == null) {
             return defVal;
         } else {
@@ -115,7 +115,7 @@ public class ConfigUtil {
 
         try {
             ConfigInfo config = new ConfigInfo(cfgName, String.valueOf(cfgVal));
-            CommonDBManager.getDaoSession(BaseApplication.getAppContext()).getConfigInfoDao().insertOrReplace(config);
+            CommonDBManager.getDaoSession(AppApplication.getAppContext()).getConfigInfoDao().insertOrReplace(config);
          //   CommonDBManager.getDaoSession(context).getEvcConfigDao().rx().save(config);
         } catch (Exception e) {
             e.printStackTrace();
@@ -165,7 +165,7 @@ public class ConfigUtil {
         }
 
         try {
-            ConfigInfoDao configDao=CommonDBManager.getDaoSession(BaseApplication.getAppContext()).getConfigInfoDao();
+            ConfigInfoDao configDao=CommonDBManager.getDaoSession(AppApplication.getAppContext()).getConfigInfoDao();
             configDao.deleteByKey(cfgName);
             ret =true;
         } catch (Exception e) {

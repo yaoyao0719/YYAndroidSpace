@@ -16,7 +16,7 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
-import com.yaoyao.android.BaseApplication;
+import com.yaoyao.android.AppApplication;
 
 /**
  * Created by lane on 14/12/4.
@@ -25,7 +25,7 @@ public class ViewUtils {
     private static Application application;
     private static Application getApplication(){
         if (application == null){
-            application = BaseApplication.getInstance();
+            application = AppApplication.getInstance();
         }
         return application;
     }

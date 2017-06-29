@@ -1,38 +1,44 @@
-package com.yaoyao.android;
+package com.yaoyao.android.module;
 
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
-import android.widget.ImageView;
 
+import com.roughike.bottombar.BottomBar;
+import com.yaoyao.android.R;
 import com.yaoyao.android.base.BaseActivity;
-import com.yaoyao.android.services.ImageLoaderService;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity {
 
-    @BindView(R.id.image)
-    ImageView image;
+    public static boolean isLaunching = false;
+
     @BindView(R.id.toolbar)
     Toolbar toolbar;
+    @BindView(R.id.viewPager)
+    ViewPager viewPager;
+    @BindView(R.id.bottomBar)
+    BottomBar bottomBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        isLaunching = true;
         ButterKnife.bind(this);
-        ImageLoaderService.loadImage("http://4493bz.1985t.com/uploads/allimg/150127/4-15012G52133.jpg", image);
-
+        initWidget();
     }
 
-    @Override
-    protected boolean getStatusFlag() {
-        return false;
-    }
 
-    @Override
     public void initWidget() {
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        isLaunching = false;
     }
 }

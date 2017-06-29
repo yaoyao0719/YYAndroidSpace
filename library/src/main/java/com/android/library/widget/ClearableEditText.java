@@ -16,7 +16,7 @@ import com.android.library.R;
 /**
  * @author:yaoyao
  * @email :229847401@qq.com
- * @date  :2017/5/17
+ * @date  :2017/6/21
  * @desc  :带清除按钮的EditText
  */
 

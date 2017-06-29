@@ -5,7 +5,7 @@ import android.net.Uri;
 import android.os.Environment;
 import android.text.TextUtils;
 
-import com.yaoyao.android.BaseApplication;
+import com.yaoyao.android.AppApplication;
 import com.yaoyao.android.utils.FileUtils;
 
 import java.io.File;
@@ -41,7 +41,7 @@ public class FileStoreService {
         if ( Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())){
             return getSDRootDir()+"/cache";
         } else {
-            return BaseApplication.getInstance().getCacheDir()+"/cache";
+            return AppApplication.getInstance().getCacheDir()+"/cache";
         }
     }
 
@@ -51,11 +51,11 @@ public class FileStoreService {
      * @return
      */
     public static String getCacheDirExternal(){
-        File externalCacheDir = BaseApplication.getInstance().getExternalCacheDir();
+        File externalCacheDir = AppApplication.getInstance().getExternalCacheDir();
         if ( Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState()) && externalCacheDir!=null && externalCacheDir.exists()){
             return externalCacheDir.getAbsolutePath();
         }else {
-            return BaseApplication.getInstance().getCacheDir()+"/cache";
+            return AppApplication.getInstance().getCacheDir()+"/cache";
         }
     }
 
@@ -69,7 +69,7 @@ public class FileStoreService {
         if ( Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())){
             path = getUserDir()+"/im/"+childDir;
         } else {
-            path = BaseApplication.getInstance().getCacheDir().getAbsolutePath()+"/im/"+childDir;
+            path = AppApplication.getInstance().getCacheDir().getAbsolutePath()+"/im/"+childDir;
         }
 
         File dir = new File(path);
@@ -106,7 +106,7 @@ public class FileStoreService {
         String targetImgPath = targetDir+"/"+ System.currentTimeMillis()+".jpg";
         try {
             FileUtils.copyFile(from.getAbsolutePath(),targetImgPath);
-            BaseApplication.getInstance().sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.fromFile(new File(targetImgPath))));
+            AppApplication.getInstance().sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.fromFile(new File(targetImgPath))));
         } catch (Exception e) {
             e.printStackTrace();
             return false;

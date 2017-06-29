@@ -1,4 +1,4 @@
-package com.yaoyao.android.activity.welcome;
+package com.yaoyao.android.module.welcome;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.yaoyao.android.MainActivity;
+import com.yaoyao.android.module.MainActivity;
 import com.yaoyao.android.R;
 
 import butterknife.BindView;

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.yaoyao.android.activity.welcome.WelcomeBaseFragment"
+    tools:context="com.yaoyao.android.module.welcome.WelcomeBaseFragment"
     android:background="@color/blue_background">
 
     <ImageView

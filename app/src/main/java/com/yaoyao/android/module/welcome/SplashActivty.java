@@ -1,4 +1,4 @@
-package com.yaoyao.android.activity;
+package com.yaoyao.android.module.welcome;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,9 +10,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.jaeger.library.StatusBarUtil;
-import com.yaoyao.android.MainActivity;
+import com.yaoyao.android.module.MainActivity;
 import com.yaoyao.android.R;
-import com.yaoyao.android.activity.welcome.WelcomeActivity;
 import com.yaoyao.android.base.BaseActivity;
 import com.yaoyao.android.model.Constants;
 import com.yaoyao.android.utils.AppUtils;

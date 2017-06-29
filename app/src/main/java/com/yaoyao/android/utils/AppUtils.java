@@ -3,7 +3,7 @@ package com.yaoyao.android.utils;
 import android.content.Context;
 import android.content.pm.PackageManager;
 
-import com.yaoyao.android.BaseApplication;
+import com.yaoyao.android.AppApplication;
 
 /**
  * @author:yaoyao
@@ -17,7 +17,7 @@ public class AppUtils {
      * 获取当前应用的版本号
      */
     public static int getVersionCode() {
-        Context appContext = BaseApplication.getAppContext();
+        Context appContext = AppApplication.getAppContext();
         try {
             return appContext.getPackageManager().getPackageInfo(appContext.getPackageName(), 0).versionCode;
         } catch (PackageManager.NameNotFoundException e) {
@@ -30,7 +30,7 @@ public class AppUtils {
      * 获取当前应用的版本号
      */
     public static String getVersionName() {
-        Context appContext = BaseApplication.getAppContext();
+        Context appContext = AppApplication.getAppContext();
         try {
             return appContext.getPackageManager().getPackageInfo(appContext.getPackageName(), 0).versionName;
         } catch (PackageManager.NameNotFoundException e) {

@@ -1,4 +1,4 @@
-package com.yaoyao.android.activity.welcome;
+package com.yaoyao.android.module.welcome;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

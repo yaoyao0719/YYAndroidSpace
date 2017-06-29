@@ -15,11 +15,11 @@ import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
  * @author:yaoyao
  * @email :229847401@qq.com
  * @date  :2017/5/17
- * @desc  :
+ * @desc  :application
  */
 
-public class BaseApplication extends Application {
-    private static BaseApplication instance;
+public class AppApplication extends Application {
+    private static AppApplication instance;
     private static Context context;
     @Override
     public void onCreate() {
@@ -31,7 +31,7 @@ public class BaseApplication extends Application {
         initFont();
     }
 
-    public static BaseApplication getInstance() {
+    public static AppApplication getInstance() {
         return instance;
     }
     //返回
@@ -45,7 +45,7 @@ public class BaseApplication extends Application {
                 .setEnableCamera(true)
                 .setEnablePreview(true)
                 .build();
-        CoreConfig coreConfig = new CoreConfig.Builder(BaseApplication.this, imageLoader, null)
+        CoreConfig coreConfig = new CoreConfig.Builder(AppApplication.this, imageLoader, null)
                 .setFunctionConfig(config)
                 .setNoAnimcation(true)
                 .setDebug(true)
