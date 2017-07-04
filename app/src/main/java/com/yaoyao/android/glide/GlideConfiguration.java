@@ -8,10 +8,13 @@ import com.bumptech.glide.module.GlideModule;
 import com.yaoyao.android.services.FileStoreService;
 
 /**
- * Created by yaoyao on 2016/12/27.
+ * @author:yaoyao
+ * @email :229847401@qq.com
+ * @date  :2017/5/17
+ * @desc  :Glide 配置
  */
 
-public class MyGlideModule implements GlideModule{
+public class GlideConfiguration implements GlideModule{
 
     @Override
     public void applyOptions(Context context, GlideBuilder glideBuilder) {
