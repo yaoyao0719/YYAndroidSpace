@@ -50,4 +50,6 @@ dependencies {
     compile 'uk.co.chrisjenx:calligraphy:2.2.0'
     compile 'org.greenrobot:greendao:3.2.2'
     compile 'com.roughike:bottom-bar:2.3.1'
+    compile 'com.lzy.net:okgo:3.0.2'
+    compile 'com.lzy.net:okrx2:2.0.2'
 }
