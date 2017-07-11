@@ -25,13 +25,13 @@ import butterknife.Unbinder;
 
 public class PracticeFragment extends BaseFragment {
 
-    private static String BACKGROUND_COLOR="background_color";
+    private static String BACKGROUND_COLOR = "background_color";
 
     @BindView(R.id.textView1)
     TextView textView1;
-    Unbinder unbinder;
     @BindView(R.id.panelParent)
     LinearLayout panelParent;
+    Unbinder unbinder;
     private String backgroundColor;
 
     public PracticeFragment() {
@@ -40,15 +40,15 @@ public class PracticeFragment extends BaseFragment {
 
     public static PracticeFragment newInstance(String color) {
         PracticeFragment fragment = new PracticeFragment();
-        Bundle args=new Bundle();
-        args.putString(BACKGROUND_COLOR,color);
+        Bundle args = new Bundle();
+        args.putString(BACKGROUND_COLOR, color);
         fragment.setArguments(args);
         return fragment;
     }
 
-    @Nullable
+
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+    protected View initView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_practice, container, false);
         unbinder = ButterKnife.bind(this, view);
         if (getArguments() != null) {
@@ -57,6 +57,11 @@ public class PracticeFragment extends BaseFragment {
         }
         initWidget();
         return view;
+    }
+
+    @Override
+    protected void initData() {
+
     }
 
     private void initWidget() {

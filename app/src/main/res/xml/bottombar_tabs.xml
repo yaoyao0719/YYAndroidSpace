@@ -7,7 +7,7 @@
     <tab
         id="@+id/tab2"
         icon="@drawable/ic_favorites"
-        title="tab2" />
+        title="极客" />
     <tab
         id="@+id/tab3"
         icon="@drawable/ic_nearby"
