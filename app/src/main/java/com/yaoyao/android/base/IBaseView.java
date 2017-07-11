@@ -7,7 +7,7 @@ package com.yaoyao.android.base;
  * @desc  :MVP中V的base类，抽象出大部分view会用的方法
  */
 
-public interface BaseView {
+public interface IBaseView {
 
     /**
      * 显示正在加载view
