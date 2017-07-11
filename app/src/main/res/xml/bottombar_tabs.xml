@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <tabs>
     <tab
-        id="@+id/tab_recents"
+        id="@+id/tab1"
         icon="@drawable/ic_recents"
-        title="每日干货" />
+        title="每日练习" />
     <tab
-        id="@+id/tab_favorites"
+        id="@+id/tab2"
         icon="@drawable/ic_favorites"
-        title="分类阅读" />
+        title="tab2" />
     <tab
-        id="@+id/tab_nearby"
+        id="@+id/tab3"
         icon="@drawable/ic_nearby"
-        title="匠心写作" />
+        title="tab3" />
     <tab
-        id="@+id/tab_friends"
+        id="@+id/tab4"
         icon="@drawable/ic_friends"
-        title="关于" />
+        title="我" />
 </tabs>
