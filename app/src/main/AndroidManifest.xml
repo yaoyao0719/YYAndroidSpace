@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <meta-data
-            android:name="com.yaoyao.android.glide.MyGlideModule"
+            android:name="com.yaoyao.android.glide.GlideConfiguration"
             android:value="GlideModule"/>
 
         <activity android:name=".module.welcome.SplashActivty">
