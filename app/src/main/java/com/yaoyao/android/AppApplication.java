@@ -3,6 +3,10 @@ package com.yaoyao.android;
 import android.app.Application;
 import android.content.Context;
 
+import com.lzy.okgo.OkGo;
+import com.lzy.okgo.cache.CacheEntity;
+import com.lzy.okgo.cache.CacheMode;
+import com.lzy.okgo.model.HttpParams;
 import com.yaoyao.android.utils.ConfigUtil;
 
 import cn.finalteam.galleryfinal.CoreConfig;
@@ -27,8 +31,20 @@ public class AppApplication extends Application {
         instance = this;
         context = getApplicationContext();
         ConfigUtil.init(this);
+        initOkGo();
         initGalleryPhoto();
         initFont();
+    }
+
+    private void initOkGo() {
+        HttpParams params =new HttpParams();
+        params.put("","");
+        OkGo.getInstance().init(this)
+                .setCacheMode(CacheMode.FIRST_CACHE_THEN_REQUEST) //设置全局缓存模式
+                .setCacheTime(CacheEntity.CACHE_NEVER_EXPIRE)     //设置缓存有效期，默认为永不失效
+                .setRetryCount(3)                                 //设置超时重连次数，默认为三次
+                .addCommonParams(params);                         //添加全局公共参数
+
     }
 
     public static AppApplication getInstance() {
