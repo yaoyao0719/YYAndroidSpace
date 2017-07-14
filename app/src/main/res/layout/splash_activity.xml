@@ -58,7 +58,7 @@
             android:background="@color/white"
             android:textColor="@color/orange_background"
             android:textSize="20dp"
-            android:text="@string/app_name"
+            android:text="~ 姚瑶的Android小窝 ~"
             android:textStyle="bold"/>
     </LinearLayout>
 </FrameLayout>
