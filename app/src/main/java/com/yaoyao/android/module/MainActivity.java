@@ -12,6 +12,7 @@ import com.roughike.bottombar.OnTabSelectListener;
 import com.yaoyao.android.R;
 import com.yaoyao.android.base.BaseActivity;
 import com.yaoyao.android.module.gank.GankFragment;
+import com.yaoyao.android.module.me.MeFragment;
 import com.yaoyao.android.module.practice.PracticeFragment;
 
 import butterknife.BindView;
@@ -93,9 +94,9 @@ public class MainActivity extends BaseActivity {
                 case 1:
                     return GankFragment.newInstance();
                 case 2:
-                    return PracticeFragment.newInstance("#ff0000");
+                    return PracticeFragment.newInstance("#ffffff");
                 case 3:
-                    return PracticeFragment.newInstance("#0000ff");
+                    return MeFragment.newInstance();
             }
             return null;
         }
