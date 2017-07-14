@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.jaeger.library.StatusBarUtil;
+import com.lzy.okgo.OkGo;
 import com.yaoyao.android.R;
 
 
@@ -25,5 +26,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        OkGo.getInstance().cancelTag(this);
     }
 }

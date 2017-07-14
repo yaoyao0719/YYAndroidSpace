@@ -43,7 +43,8 @@ public class AppApplication extends Application {
                 .setCacheMode(CacheMode.FIRST_CACHE_THEN_REQUEST) //设置全局缓存模式
                 .setCacheTime(CacheEntity.CACHE_NEVER_EXPIRE)     //设置缓存有效期，默认为永不失效
                 .setRetryCount(3)                                 //设置超时重连次数，默认为三次
-                .addCommonParams(params);                         //添加全局公共参数
+               // .addCommonParams(params)                          //添加全局公共参数
+        ;
 
     }
 
